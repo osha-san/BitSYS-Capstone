@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="icon" href="./img/logo/dmt logo.png " type="icon" />
+        <link rel="stylesheet" href="admin-logbook.css"> <!--palit-->
+        <script src="admin-logbook.js" defer></script> <!--palit-->
+        <title>DMT LAW OFFICE</title>     
+    </head>
+
+    <body>
+        <header class="header">
+            <h3>DMT Law Office</h3>
+            <p>Good day, Admin</p>
+        </header>
+
+        <section class="sidebar">
+            <div class="logo">
+                <img src="./img/logo/dmt logo.png" alt="DMT Law Logo">                         
+                <h3>DMT Law</h3>
+            </div>
+            <nav class="navbar">        
+                <ul>
+                    <li>                        
+                        <a href="admin-dashboard.html">
+                            <img src="./img/icons/admin/dashboard.png">Dashboard
+                        </a>                
+                    </li>
+                    <li>                        
+                        <a href="admin-appointment.html">
+                            <img src="./img/icons/admin/appointment.png">Appointments
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin-calendar.html">
+                            <img src="./img/icons/admin/calendar.png">Calendar
+                        </a>
+                    </li>
+                    <li>                        
+                        <a href="admin-billings.html"> <!--palit-->
+                            <img src="./img/icons/admin/pay.png">My Bills
+                        </a>
+                    </li>
+                    <li>                        
+                        <a href="admin-case-library.html"> <!--palit-->
+                            <img src="./img/icons/admin/case library.png">Case Library
+                        </a>
+                    </li>
+                    <li>                        
+                        <a href="admin-clients.html"> <!--palit-->
+                            <img src="./img/icons/admin/my client.png">Clients
+                        </a>
+                    </li>
+                    <li class="active">                        
+                        <a href="admin-logbook.html"> <!--palit-->
+                            <img src="./img/icons/admin/logbook.png">Logbook
+                        </a>
+                    </li>
+                    <li class="logout">             <!--palit-->           
+                        <a href="#">
+                            <img src="./img/icons/admin/logout.png">Log Out
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+        
+        <main class="main">
+            <div class="logbook"> <!--palit-->
+                <div class="content-wrapper">
+                    <div class="document-area" id="documentArea">
+                      <div class="document-container">
+                        <div class="document-btn">
+                          <button class="btnActive" onclick="ongoingIngoingTab('outgoing')" id="ongoingTab">OUTGOING</button>
+                          <button onclick="ongoingIngoingTab('incoming')" id="ingoingTab">INCOMING</button>
+                          <button onclick="openModal()">
+                            <i class="bx bx-plus"></i> ADD
+                          </button>
+                        </div>
+                        <div id="outgoing" class="tab-content">
+                          <table id="outgoingTable">
+                            <thead>
+                              <tr>
+                                <th>Document Name</th>
+                                <th>Date Issued<br><p>MM/DD/YYYY</p></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>sample1.docx</td>
+                                <td>08/14/2024</td>
+                              </tr>
+                              <tr>
+                                <td>sample2.docx</td>
+                                <td>08/13/2024</td>
+                              </tr>
+                              <tr>
+                                <td>sample3.docx</td>
+                                <td>08/13/2024</td>
+                              </tr>
+                              <tr>
+                                <td>sample4.docx</td>
+                                <td>08/13/2024</td>
+                              </tr>
+                              <tr>
+                                <td>sample5.docx</td>
+                                <td>08/13/2024</td>
+                              </tr>
+                              <tr>
+                                <td>sample6.docx</td>
+                                <td>08/13/2024</td>
+                              </tr>
+                              <tr>
+                                <td>sample7.docx</td>
+                                <td>08/13/2024</td>
+                              </tr>
+                              <tr>
+                                <td>sample8.docx</td>
+                                <td>08/13/2024</td>
+                              </tr>
+                              <tr>
+                                <td>sample9.docx</td>
+                                <td>08/13/2024</td>
+                              </tr>
+                              <tr>
+                                <td>sample10.docx</td>
+                                <td>08/13/2024</td>
+                              </tr>
+                              <tr>
+                                <td>sample11.docx</td>
+                                <td>08/13/2024</td>
+                              </tr>
+                              <tr>
+                                <td>sample11.docx</td>
+                                <td>08/13/2024</td>
+                              </tr>
+                              <tr>
+                                <td>sample11.docx</td>
+                                <td>08/13/2024</td>
+                              </tr>
+                              <tr>
+                                <td>sample11.docx</td>
+                                <td>08/13/2024</td>
+                              </tr>
+                              <tr>
+                                <td>sample11.docx</td>
+                                <td>08/13/2024</td>
+                              </tr>
+                              <tr>
+                                <td>sample11.docx</td>
+                                <td>08/13/2024</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div id="incoming" class="tab-content" style="display: none;">
+                          <table id="incomingTable">
+                            <thead>
+                              <tr>
+                                <th>Document Name</th>
+                                <th>Date Issued<br><p>MM/DD/YYYY</p></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>incoming1.pdf</td>
+                                <td>08/13/2024</td>
+                              </tr>
+                              <tr>
+                                <td>incoming2.pdf</td>
+                                <td>08/13/2024</td>
+                              </tr>
+                              <tr>
+                                <td>incoming3.pdf</td>
+                                <td>08/13/2024</td>
+                              </tr>
+                              <tr>
+                                <td>incoming4.pdf</td>
+                                <td>08/13/2024</td>
+                              </tr>
+                              <tr>
+                                <td>incoming5.pdf</td>
+                                <td>08/13/2024</td>
+                              </tr>
+                              <tr>
+                                <td>incoming6.pdf</td>
+                                <td>08/13/2024</td>
+                              </tr>
+                              <tr>
+                                <td>incoming7.pdf</td>
+                                <td>08/13/2024</td>
+                              </tr>
+                              <tr>
+                                <td>incoming8.pdf</td>
+                                <td>08/13/2024</td>
+                              </tr>
+                              <tr>
+                                <td>incoming9.pdf</td>
+                                <td>08/13/2024</td>
+                              </tr>
+                              <tr>
+                                <td>incoming10.pdf</td>
+                                <td>08/13/2024</td>
+                              </tr>
+                              <tr>
+                                <td>sample11.docx</td>
+                                <td>08/13/2024</td>
+                              </tr>
+                              <tr>
+                                <td>sample11.docx</td>
+                                <td>08/13/2024</td>
+                              </tr>
+                              <tr>
+                                <td>sample11.docx</td>
+                                <td>08/13/2024</td>
+                              </tr>
+                              <tr>
+                                <td>sample11.docx</td>
+                                <td>08/13/2024</td>
+                              </tr>
+                              <tr>
+                                <td>sample11.docx</td>
+                                <td>08/13/2024</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="addModal" class="modal">
+                <div class="modal-content">
+                  <span class="close" onclick="closeModal()">&times;</span>
+                  <form id="addDocumentForm">
+                    <div class="form-group">
+                      <label for="documentUpload">Document Name:</label>
+                      <div class="form-group-input">
+                        <span id="fileNameDisplay">No file chosen</span>
+                        <label for="documentUpload" class="file-upload-label">
+                          Attach File <i class="bx bx-paperclip"></i>
+                        </label>
+                        <input
+                          type="file"
+                          id="documentUpload"
+                          class="file-input"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="documentDate">Date Received:</label>
+                      <div class="form-group-input">
+                        <input
+                          type="text"
+                          id="documentDate"
+                          placeholder="MM / DD / YYYY"
+                          onfocus="(this.type='date')"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="recipientSender">Recipient:</label>
+                      <div class="form-group-input">
+                        <input type="text" id="recipientSender" required />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="address">Address:</label>
+                      <div class="form-group-input">
+                        <input type="text" id="address" required />
+                      </div>
+                    </div>
+                    <div class="form-buttons">
+                      <button type="button" class="cancel-button" onclick="closeModal()">
+                        Cancel
+                      </button>
+                      <button type="submit" class="confirm-button">Confirm</button>
+                    </div>
+                  </form>
+                </div>
+
+            </div>
+        </main>
+    </body>
+</html>

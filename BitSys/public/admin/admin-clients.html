@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="./img/logo/dmt logo.png " type="icon" />
+    <link rel="stylesheet" href="admin-clients.css">
+    <script src="admin-clients.js" defer></script>
+    <title>DMT LAW OFFICE</title>     
+  </head>
+
+  <body>
+    <header class="header">
+      <h3>DMT Law Office</h3>
+      <p>Good day, Admin</p>
+    </header>
+
+    <section class="sidebar">
+      <div class="logo">
+        <img src="./img/logo/dmt logo.png" alt="DMT Law Logo">                         
+        <h3>DMT Law</h3>
+      </div>
+      <nav class="navbar">        
+        <ul>
+          <li>                        
+            <a href="admin-dashboard.html">
+              <img src="./img/icons/admin/dashboard.png">Dashboard
+                        </a>                
+                    </li>
+                    <li>                        
+                        <a href="admin-appointment.html">
+                            <img src="./img/icons/admin/appointment.png">Appointments
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin-calendar.html">
+                            <img src="./img/icons/admin/calendar.png">Calendar
+                        </a>
+                    </li>
+                    <li>                        
+                        <a href="admin-billings.html">
+                            <img src="./img/icons/admin/pay.png">My Bills
+                        </a>
+                    </li>
+                    <li>                        
+                        <a href="admin-case-library.html">
+                            <img src="./img/icons/admin/case library.png">Case Library
+                        </a>
+                    </li>
+                    <li class="active">                        
+                        <a href="admin-clients.html">
+                            <img src="./img/icons/admin/my client.png">Clients
+                        </a>
+                    </li>
+                    <li>                        
+                        <a href="admin-logbook.html">
+                            <img src="./img/icons/admin/logbook.png">Logbook
+                        </a>
+                    </li>
+                    <li class="logout">                        
+                        <a href="#">
+                            <img src="./img/icons/admin/logout.png">Log Out
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+        
+        <main class="main">
+          <div class="clients"> <!--palit-->
+            <div class="combined-container">
+              <div class="search-container">
+                <div class="search-bar">
+                  <input type="text" placeholder="Search..." />
+                  <i class="bx bx-search"></i>
+                </div>
+                <button id="search-btn">Search</button>
+              </div>
+              <div class="table-wrapper">
+                <table id="dataTable">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Contact</th>
+                      <th>Email</th>
+                      <th>Case Title</th>
+                      <th>Case Number</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Juan Dela Cruz</td>
+                      <td>09## ### ####</td>
+                      <td>SampleEmail</td>
+                      <td>Sample 1</td>
+                      <th>Case Number 1</th>
+                      <td class="status ongoing">Ongoing</td>
+                    </tr>
+                    <tr>
+                      <td>Maria Labo</td>
+                      <td>09## ### ####</td>
+                      <td>SampleEmail1</td>
+                      <td>Sample 2</td>
+                      <th>Case Number 2</th>
+                      <td class="status ongoing">Ongoing</td>
+                    </tr>
+                    <tr>
+                      <td>Jericho Rose</td>
+                      <td>09## ### ####</td>
+                      <td>SampleEmail2</td>
+                      <td>Sample 3</td>
+                      <th>Case Number 3</th>
+                      <td class="status done">Done</td>
+                    </tr>
+                    <tr>
+                      <td>Jenica Sanchez</td>
+                      <td>09## ### ####</td>
+                      <td>SampleEmail3</td>
+                      <td>Sample 4</td>
+                      <th>Case Number 4</th>
+                      <td class="status done">Done</td>
+                    </tr>
+                    <tr>
+                      <td>Jenica Sanchez</td>
+                      <td>09## ### ####</td>
+                      <td>SampleEmail3</td>
+                      <td>Sample 4</td>
+                      <th>Case Number 5</th>
+                      <td class="status done">Done</td>
+                    </tr>
+                    <tr>
+                      <td>Jenica Sanchez</td>
+                      <td>09## ### ####</td>
+                      <td>SampleEmail3</td>
+                      <td>Sample 4</td>
+                      <th>Case Number 6</th>
+                      <td class="status done">Done</td>
+                    </tr>
+                    <tr>
+                      <td>Jenica Sanchez</td>
+                      <td>09## ### ####</td>
+                      <td>SampleEmail3</td>
+                      <td>Sample 4</td>
+                      <th>Case Number 7</th>
+                      <td class="status done">Done</td>
+                    </tr>
+                    <tr>
+                      <td>Jenica Sanchez</td>
+                      <td>09## ### ####</td>
+                      <td>SampleEmail3</td>
+                      <td>Sample 4</td>
+                      <th>Case Number 8</th>
+                      <td class="status done">Done</td>
+                    </tr>
+                    <tr>
+                      <td>Jenica Sanchez</td>
+                      <td>09## ### ####</td>
+                      <td>SampleEmail3</td>
+                      <td>Sample 4</td>
+                      <th>Case Number 9</th>
+                      <td class="status done">Done</td>
+                    </tr>
+  
+                    <tr>
+                      <td>Jenica Sanchez</td>
+                      <td>09## ### ####</td>
+                      <td>SampleEmail3</td>
+                      <td>Sample 4</td>
+                      <th>Case Number 10</th>
+                      <td class="status done">Done</td>
+                    </tr>
+  
+                    <tr>
+                      <td>Jenica Sanchez</td>
+                      <td>09## ### ####</td>
+                      <td>SampleEmail3</td>
+                      <td>Sample 4</td>
+                      <th>Case Number 11</th>
+                      <td class="status done">Done</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+          </div> 
+        </main>
+    </body>
+</html>
