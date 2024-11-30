@@ -1,0 +1,393 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    background-color: gainsboro;
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    grid-template-rows: 50px 1fr;
+    grid-template-areas: 
+        "side head"
+        "side main";
+}
+
+.header {
+    background-color: white;
+    grid-area: head;
+    display: flex;    
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 0px 4px 26px 10px #00000011;    
+}
+
+.sidebar {
+    background-color: #000117;
+    height: 100vh;
+    grid-area: side;
+    position: fixed;
+    top: 0;    
+    width: 80px;    
+    transition: width 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.sidebar:hover {
+    width: 245px;
+}
+
+.logo {
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    margin-bottom: 10px; 
+    white-space: nowrap;  
+}
+
+.logo h3 {
+    margin: 0;
+    
+}
+
+.logo img {    
+    margin: 30px 20px 30px 15px; 
+    width: 45px;
+    height: auto; 
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.navbar ul li a:hover {
+    background-color: #a88532; 
+    border-radius: 10px;
+    margin: 0px 20px 0px 20px;
+}
+
+.navbar ul li.active img {
+    background-color: gray;
+}
+
+.navbar ul li img {
+    margin: 20px 30px 20px 30px;
+    width: 20px;
+}
+
+.logout {
+    margin-top: 200px;
+}
+
+.main {
+    background-color: rgb(209, 217, 232);
+    grid-area: main;
+    padding: 20px 20px 0px 20px;
+}
+
+.billingContent { /*palit*/
+    background-color: white;
+    border-radius: 30px 30px 0px 0px;
+    height: calc(100vh - 120px);
+    padding: 25px;
+    gap: 13px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-areas: 
+        "d1 d1 d2 d2";
+}
+
+  
+  .content h2 {
+    margin-bottom: 18px;
+  }
+  
+  .billing,
+  .preview {
+    background-color: white;
+    border-radius: 10px;
+    flex: 1;
+  }
+  
+  .billing {
+    grid-area: d1;
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .preview {
+    grid-area: d2;
+  }
+  
+  .tabs {
+    display: flex;
+    margin: 20px 0px;
+    justify-content: space-evenly;
+  }
+  
+  .tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid #ddd;
+    width: 100%;
+    text-align: center;
+    border-radius: 3px;
+  }
+  
+  .tab.active {
+    background-color: #f0f0f0;
+    border-bottom: none;
+  }
+
+  .billing-items-container {
+    overflow-y: auto;
+    height: 510px;
+  }
+  
+  .billing-item {
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 18px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .billing-item-header,
+  .billing-item-details,
+  .billing-item-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+  }
+  
+  .billing-item-header {
+    align-items: center;
+  }
+  
+  .billing-item-details {
+    margin-top: 5px;
+  }
+  
+  .billing-item.selected {
+    border: 2px solid #007bff;
+  }
+  
+  .type,
+  .status {
+    width: 30%;
+  }
+  
+  .name,
+  .date {
+    width: 30%;
+  }
+  
+  .invoice-no,
+  .amount {
+    width: 30%;
+  }
+  
+  .type {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .billing-item .status {
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 0.8em;
+    color: #fff;
+  }
+  
+  .status.pending {
+    background-color: rgba(177, 42, 42, 0.116);
+    color: red;
+    width: 12%;
+    text-align: center;
+  }
+  
+  .status.paid {
+    background-color: rgba(0, 128, 0, 0.144);
+    color: green;
+    width: 12%;
+    text-align: center;
+  }
+  
+  .status.error {
+    background-color: #c41a2b;
+    color: white;
+    width: 12%;
+    text-align: center;
+  }
+  
+  .name {
+    color: #000000;
+    font-weight: 600;
+  }
+  
+  .date {
+    color: #666;
+  }
+  
+  .invoice-preview {
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 20px;
+    height: calc(100% - 100px);
+    margin-top: 20px;
+  }
+  .invoice-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .invoice-header-left {
+    flex: 1;
+  }
+  .invoice-header-right {
+    text-align: right;
+  }
+  .invoice-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  .invoice-table th,
+  .invoice-table td {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px;
+    text-align: left;
+  }
+  .invoice-table th:last-child,
+  .invoice-table td:last-child {
+    text-align: right;
+  }
+  .form-group {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+  }
+  .form-group label {
+    flex: 0 0 150px;
+    margin-right: 10px;
+  }
+  .form-group input,
+  .form-group select {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+  }
+  .button-group {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .btn-primary {
+    background-color: #007bffce;
+    color: #000000;
+    font-weight: 600;
+    padding: 12px 36px;
+    border-radius: 16px;
+  }
+  .btn-secondary {
+    background-color: transparent;
+    color: #000000;
+    padding: 12px 36px;
+    border-radius: 16px;
+    font-weight: 600;
+    border: 1px solid black;
+  }
+  .status {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-left: auto;
+  }
+  
+  .billing-item.selected {
+    background-color: #f0f0f0;
+  }
+  
+  .name {
+    text-align: left;
+  }
+  
+  .date {
+    text-align: right;
+  }
+  
+  .invoice-no {
+    text-align: left;
+  }
+  
+  .amount {
+    text-align: right;
+  }
+  
+  .file-upload {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 7px;
+    background-color: white;
+    width: 100%;
+  }
+  
+  .upload-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 10px;
+    color: #c5c5c5;
+  }
+  
+  .upload-button i {
+    margin-right: 5px;
+  }
+  
+  #file-name {
+    color: #666;
+    flex-grow: 1;
+    font-size: 16px;
+  }
+  
+  .billing::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .billing::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+  }
+  
+  .billing::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+  
+  .totalAmount {
+    display: flex;
+    justify-content: flex-end;
+  }

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="icon" href="./img/logo/dmt logo.png " type="icon" />
+        <link rel="stylesheet" href="client-profile.css"> <!--palit-->
+        <script src="client-profile.js" defer></script> <!--palit-->
+        <title>DMT LAW OFFICE</title>     
+    </head>
+
+    <body>
+        <header class="header">
+            <h3>DMT Law Office</h3>
+            <p>Good day, Jay-Ar</p>
+        </header>
+
+        <section class="sidebar">
+            <div class="logo">
+                <img src="./img/logo/dmt logo.png" alt="DMT Law Logo">                         
+                <h3>DMT Law</h3>
+            </div>
+            <nav class="navbar">        
+                <ul>
+                    <li>                        
+                        <a href="client-dashboard.html">
+                            <img src="./img/icons/admin/dashboard.png">Dashboard
+                        </a>                
+                    </li>
+                    <li>                        
+                        <a href="client-appointment.html">
+                            <img src="./img/icons/admin/appointment.png">Appointments
+                        </a>
+                    </li>
+                    <li>
+                        <a href="client-calendar.html"> <!--palit-->
+                            <img src="./img/icons/admin/calendar.png">Calendar
+                        </a>
+                    </li>
+                    <li>                        
+                        <a href="client-billings.html"> <!--palit-->
+                            <img src="./img/icons/client/pay.png">My Bills
+                        </a>
+                    </li>
+                    <li>                        
+                        <a href="client-soa.html"> <!--palit-->
+                            <img src="./img/icons/client/document.png">My SOA
+                        </a>
+                    </li>
+                    <li class="active">                        
+                      <a href="client-profile.html"> <!--palit-->
+                          <img src="./img/icons/client/profile.png">Profile
+                      </a>
+                    </li>
+                    <li class="logout">             <!--palit-->           
+                        <a href="#">
+                            <img src="./img/icons/admin/logout.png">Log Out
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+        
+        <main class="main">
+            <div class="dashboard"> <!--palit-->
+                <div class="container">
+                    <div class="tabs-container">
+                      <div class="tabs">
+                        <div class="tab active" data-section="profile">My Profile</div>
+                        <div class="tab" data-section="notifications">Notifications</div>
+                        <div class="tab" data-section="case-update">Case Update</div>
+                        <div class="tab delete" id="deleteAccount">Delete Account</div>
+                      </div>
+                    </div>
+                    <div class="section-container">
+                        <h2>My Profile</h2>
+                        <section id="profile" class="section active">
+                        <div class="profile-header">
+                          <div class="profile-info">
+                            <div class="profile-image" id="profileImage">
+                              <img src="#" alt="PICTURE" />
+                              <input type="file" id="uploadProfilePic" accept="image/*" style="display:none;" />
+                            </div>
+                            <div>
+                              <div class="profile-name">Juan Dela Cruz</div>
+                              <div class="profile-id">#BAH945280</div>
+                            </div>
+                          </div>
+                          <button class="edit-button" id="editProfileBtn">Edit</button>
+                        </div>
+                        <div class="info-section">
+                          <div class="info-header">
+                            <h2>Personal Information</h2>
+                            <button class="edit-button" id="editProfileBtn">Edit</button>
+                          </div>
+                          <div class="info-grid">
+                            <div class="info-item">
+                              <label>First Name</label>
+                              <div id="firstName">Juan</div>
+                            </div>
+                            <div class="info-item">
+                              <label>Last Name</label>
+                              <div id="lastName">Dela Cruz</div>
+                            </div>
+                            <div class="info-item">
+                              <label>Email address</label>
+                              <div id="email">juandelacruz@gmail.com</div>
+                            </div>
+                            <div class="info-item">
+                              <label>Phone</label>
+                              <div id="phone">+09 345 346 46</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="info-section">
+                            <div class="info-header">
+                              <h2>Address</h2>
+                              <button class="edit-button" id="editProfileBtn">Edit</button>
+                            </div>
+                            <div class="info-grid">
+                              <div class="info-item">
+                                <label>Country</label>
+                                <div id="country">Philippines</div>
+                              </div>
+                              <div class="info-item">
+                                <label>City</label>
+                                <div id="city">Antipolo</div>
+                              </div>
+                              <div class="info-item">
+                                <label>Province/Region</label>
+                                <div id="region">Rizal</div>
+                              </div>
+                              <div class="info-item">
+                                <label>Postal Code</label>
+                                <div id="postalCode">1870</div>
+                              </div>
+                            </div>
+                          </div>
+                      </section>
+                      
+                      <section id="notifications" class="section">
+                        <h2>Notifications</h2>
+                        <div id="notificationsList">
+                          <div class="notification">
+                            <div class="notification-title">
+                              Atty. Sample scheduled an appointment
+                            </div>
+                            <div class="notification-date">August 30, 2024 - 8:05 am</div>
+                          </div>
+                          <div class="notification">
+                            <div class="notification-title">
+                              You have successfully paid your Bill
+                            </div>
+                            <div class="notification-date">August 19, 2024 - 11:13 am</div>
+                          </div>
+                          <div class="notification">
+                            <div class="notification-title">
+                              You have successfully paid your Bill
+                            </div>
+                            <div class="notification-date">August 7, 2024 - 1:34 pm</div>
+                          </div>
+                          <div class="notification">
+                            <div class="notification-title">
+                              You have an appointment with Atty. Sample
+                            </div>
+                            <div class="notification-date">August 19, 2024 - 10:03 am</div>
+                          </div>
+                          <div class="notification">
+                            <div class="notification-title">
+                              You have an Appointment with Atty. Sample
+                            </div>
+                            <div class="notification-date">August 30, 2024 - 7:40 pm</div>
+                          </div>
+                          <div class="notification">
+                            <div class="notification-title">
+                              You have successfully paid your Bill
+                            </div>
+                            <div class="notification-date">August 7, 2024 - 8:01 pm</div>
+                          </div>
+                        </div>
+                      </section>
+                      <section id="case-update" class="section">
+                        <div class="case-details">
+                          <div class="case-header">
+                            <h2>Case Number : <span>CA-2024-0483</span></h2>
+                            <div class="case-title-container">
+                              <div class="case-title">
+                                Juan Dela Cruz vs. XYZ Corporation - Labor Law Violation
+                                <span class="case-status">On Going</span>
+                              </div>
+                            </div>
+                            <div class="current-status">
+                              Current Status: <br>
+                              <span>Case Investigation & Research</span>
+                            </div>
+                          </div>
+                          <div class="case-info">
+                            <h3>Information</h3>
+                            <div class="info-grid">
+                              <span class="info-label">Name<br><span class="info-container">Juan Dela Cruz</span></span>
+                              <span class="info-label">Contact Number <br><span class="info-container">090909090900</span></span>
+                              <span class="info-label">Attorney <br> <span class="info-container">Atty. Angel O. Abalos, CPA</span></span>
+                            </div>
+                          </div>
+                          <div class="case-description">
+                            <h3>Description</h3>
+                            <p>
+                              Juan Dela Cruz has filed a labor law violation case against
+                              XYZ Corporation, alleging wrongful termination without due
+                              process. He claims that his employer did not follow proper
+                              legal procedures, failed to provide required benefits such as
+                              overtime pay, and violated his right to fair compensation. The
+                              client seeks reinstatement or compensation for lost wages and
+                              damages.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="case-timeline">
+                          <div class="timeline-title">Case Timeline</div>
+                          <div class="timeline-subtitle">Track your case progress here</div>
+                          <div class="timeline-items">
+                            <div class="timeline-item">
+                              <div class="timeline-marker"></div>
+                              <div class="timeline-content">
+                                <div class="timeline-event">Case Start</div>
+                                <div class="timeline-date">08/07/2024 15:29</div>
+                              </div>
+                            </div>
+                            <div class="timeline-item">
+                              <div class="timeline-marker"></div>
+                              <div class="timeline-content">
+                                <div class="timeline-event">Initial Consultation</div>
+                                <div class="timeline-date">08/07/2024 15:29</div>
+                              </div>
+                            </div>
+                            <div class="timeline-item">
+                              <div class="timeline-marker"></div>
+                              <div class="timeline-content">
+                                <div class="timeline-event">
+                                  Case Investigation and Research
+                                </div>
+                                <div class="timeline-date">08/07/2024 15:29</div>
+                              </div>
+                            </div>
+                            <div class="timeline-item">
+                              <div class="timeline-marker"></div>
+                              <div class="timeline-content">
+                                <div class="timeline-event">Filing of Documents</div>
+                                <div class="timeline-date">08/07/2024 15:29</div>
+                              </div>
+                            </div>
+                            <div class="timeline-item">
+                              <div class="timeline-marker"></div>
+                              <div class="timeline-content">
+                                <div class="timeline-event">
+                                  Pre-Trial Motions and Discovery
+                                </div>
+                                <div class="timeline-date">08/07/2024 15:29</div>
+                              </div>
+                            </div>
+                            <div class="timeline-item">
+                              <div class="timeline-marker"></div>
+                              <div class="timeline-content">
+                                <div class="timeline-event">Court Appearances</div>
+                                <div class="timeline-date">08/07/2024 15:29</div>
+                              </div>
+                            </div>
+                            <div class="timeline-item">
+                              <div class="timeline-marker"></div>
+                              <div class="timeline-content">
+                                <div class="timeline-event">Trial</div>
+                                <div class="timeline-date">08/07/2024 15:29</div>
+                              </div>
+                            </div>
+                            <div class="timeline-item">
+                              <div class="timeline-marker"></div>
+                              <div class="timeline-content">
+                                <div class="timeline-event">Appeals (if applicable)</div>
+                                <div class="timeline-date">08/07/2024 15:29</div>
+                              </div>
+                            </div>
+                            <div class="timeline-item">
+                              <div class="timeline-marker"></div>
+                              <div class="timeline-content">
+                                <div class="timeline-event">Case Conclusion</div>
+                                <div class="timeline-date">08/07/2024 15:29</div>
+                              </div>
+                            </div>
+                            <div class="timeline-item">
+                              <div class="timeline-marker"></div>
+                              <div class="timeline-content">
+                                <div class="timeline-event">Case Closed</div>
+                                <div class="timeline-date">08/07/2024 15:29</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                      <div id="appointmentModal" class="modal">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2 class="modal-title">Appointments</h2>
+                                <span class="close">&times;</span>
+                            </div>
+                            <h3 class="modal-subtitle">On-Site Court Appearance Schedule appointment with Atty. Sample</h3>
+                            <p class="modal-date">10:00 AM • Aug 30, 2024</p>
+                            <div class="modal-info">
+                                <span class="modal-info-label">Client Name:</span>
+                                <span>Juan Dela Cruz</span>
+                                <span class="modal-info-label">Attorney:</span>
+                                <span>Atty. Sample</span>
+                                <span class="modal-info-label">Case Number:</span>
+                                <span>CA-2024-0483</span>
+                                <span class="modal-info-label">Practice Area:</span>
+                                <span>Labor Law</span>
+                                <span class="modal-info-label">Time & Day:</span>
+                                <span>Friday, 10:00 AM, August 30, 2024</span>
+                                <span class="modal-info-label">Mode:</span>
+                                <span>On-Site</span>
+                            </div>
+                            <div class="modal-description">
+                                <h4>Description</h4>
+                                <p>Please ensure all necessary documents and preparations are in order prior to the scheduled date. For any inquiries or changes to this appointment, kindly contact our office as soon as possible. Your prompt attention to this matter is greatly appreciated.
+                                  Please ensure all necessary documents and preparations are in order prior to the scheduled date. For any inquiries or changes to this appointment, kindly contact our office as soon as possible. Your prompt attention to this matter is greatly appreciated.
+                                  Please ensure all necessary documents and preparations are in order prior to the scheduled date. For any inquiries or changes to this appointment, kindly contact our office as soon as possible. Your prompt attention to this matter is greatly appreciated.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="deleteAccountModal" class="modal">
+                      <div class="deletemodal-content">
+                          <div class="modal-header">
+                              <h2 class="modal-title">Delete Account</h2>
+                              <span class="close">&times;</span>
+                          </div>
+                          <p class="delete-subtitle">Please enter your password to confirm.</p>
+                          <input type="password" id="deleteAccountPassword" placeholder="Enter your password">
+                          <button id="confirmDeleteAccount" class="confirmDelete">Delete</button>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="icon" href="./img/logo/dmt logo.png " type="icon" />
+        <link rel="stylesheet" href="admin-case-library.css"> <!--palit-->
+        <script src="admin-case-library.js" defer></script> <!--palit-->
+        <title>DMT LAW OFFICE</title>     
+    </head>
+
+    <body>
+        <header class="header">
+            <h3>DMT Law Office</h3>
+            <p>Good day, Admin</p>
+        </header>
+
+        <section class="sidebar">
+            <div class="logo">
+                <img src="./img/logo/dmt logo.png" alt="DMT Law Logo">                         
+                <h3>DMT Law</h3>
+            </div>
+            <nav class="navbar">        
+                <ul>
+                    <li class="active">                        
+                        <a href="admin-dashboard.html">
+                            <img src="./img/icons/admin/dashboard.png">Dashboard
+                        </a>                
+                    </li>
+                    <li>                        
+                        <a href="admin-appointment.html">
+                            <img src="./img/icons/admin/appointment.png">Appointments
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin-calendar.html">
+                            <img src="./img/icons/admin/calendar.png">Calendar
+                        </a>
+                    </li>
+                    <li>                        
+                        <a href="admin-billings.html"> <!--palit-->
+                            <img src="./img/icons/admin/pay.png">My Bills
+                        </a>
+                    </li>
+                    <li class="active">                        
+                        <a href="admin-case-library.html"> <!--palit-->
+                            <img src="./img/icons/admin/case library.png">Case Library
+                        </a>
+                    </li>
+                    <li>                        
+                        <a href="admin-clients.html"> <!--palit-->
+                            <img src="./img/icons/admin/my client.png">Clients
+                        </a>
+                    </li>
+                    <li>                        
+                        <a href="admin-logbook.html"> <!--palit-->
+                            <img src="./img/icons/admin/logbook.png">Logbook
+                        </a>
+                    </li>
+                    <li class="logout">             <!--palit-->           
+                        <a href="#">
+                            <img src="./img/icons/admin/logout.png">Log Out
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+        
+        <main class="main">
+            <div class="case-library"> <!--palit-->
+                <div class="combined-container">
+                    <div class="search-container">
+                        <div class="search-bar">
+                            <input type="text" placeholder="Search..." />
+                            <i class="bx bx-search"></i>
+                        </div>
+                        <button id="search-btn">Search</button>
+                        <button class="edit-btn">Edit</button>
+                        <button class="delete-btn">Delete</button>
+                    </div>
+                    <div class="case-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Case Title</th>
+                                    <th>Type</th>
+                                    <th>Case No.</th>
+                                </tr>
+                            </thead>
+                            <tbody id="caseTableBody"></tbody>
+                        </table>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div id="deleteModal" class="modal">
+                <div class="modal-content1">
+                <p>Are you sure you want to delete this record?</p>
+                <div class="modal-buttons">
+                    <button class="confirm-btn1" onclick="confirmDelete()">Yes</button>
+                    <button class="cancel-btn1" onclick="closeModal()">No</button>
+                </div>
+                </div>
+            </div>
+            <div id="passwordModal" class="modal">
+                <div class="modal-content">
+                <p>Please enter your password</p>
+                <input type="password" id="passwordInput" />
+                <div class="modal-buttons">
+                    <button class="cancel-btn" onclick="closeModal()">Cancel</button>
+                    <button class="confirm-btn" onclick="confirmPassword()">
+                    Confirm
+                    </button>
+                </div>
+                </div>
+                </div>
+        </main>
+    </body>
+</html>
