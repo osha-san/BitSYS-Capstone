@@ -15,7 +15,7 @@ body {
     display: grid;
     grid-template-columns: 80px 1fr;
     grid-template-rows: 50px 1fr;
-    grid-template-areas: 
+    grid-template-areas:
         "side head"
         "side main";
 }
@@ -23,11 +23,11 @@ body {
 .header {
     background-color: white;
     grid-area: head;
-    display: flex;    
+    display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    box-shadow: 0px 4px 26px 10px #00000011;    
+    box-shadow: 0px 4px 26px 10px #00000011;
 }
 
 .sidebar {
@@ -35,8 +35,8 @@ body {
     height: 100vh;
     grid-area: side;
     position: fixed;
-    top: 0;    
-    width: 80px;    
+    top: 0;
+    width: 80px;
     transition: width 0.3s ease-in-out;
     overflow: hidden;
 }
@@ -50,19 +50,19 @@ body {
     display: flex;
     align-items: center;
     height: 100px;
-    margin-bottom: 10px; 
-    white-space: nowrap;  
+    margin-bottom: 10px;
+    white-space: nowrap;
 }
 
 .logo h3 {
     margin: 0;
-    
+
 }
 
-.logo img {    
-    margin: 30px 20px 30px 15px; 
+.logo img {
+    margin: 30px 20px 30px 15px;
     width: 45px;
-    height: auto; 
+    height: auto;
 }
 
 .navbar ul li a {
@@ -75,7 +75,7 @@ body {
 }
 
 .navbar ul li a:hover {
-    background-color: #a88532; 
+    background-color: #a88532;
     border-radius: 10px;
     margin: 0px 20px 0px 20px;
 }
@@ -159,7 +159,7 @@ td {
 }
 
 .invoice-header .form-group {
-  display: flex;    
+  display: flex;
   align-items: center;
   justify-content: space-between;
 }
@@ -255,7 +255,7 @@ hr {
 .total-amount {
   text-align: right;
   font-weight: bold;
-  margin-bottom: 270px;
+  margin-bottom: 60px;
 }
 
 .payment-details .form-group {
@@ -291,7 +291,7 @@ hr {
   cursor: pointer;
 }
 
-.form-actions2 {  /* Confirm Decline */   
+.form-actions2 {  /* Confirm Decline */
   display: flex;
   gap: 10px;
   margin-top: 20px;
@@ -313,6 +313,7 @@ button {
 
 .form-actions button {
   background-color: #029b07;
+  margin-top: 30px;
   color: black;
   font-weight: 600;
   width: 160px;

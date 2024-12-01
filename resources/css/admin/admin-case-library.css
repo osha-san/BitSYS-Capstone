@@ -15,7 +15,7 @@ body {
     display: grid;
     grid-template-columns: 80px 1fr;
     grid-template-rows: 50px 1fr;
-    grid-template-areas: 
+    grid-template-areas:
         "side head"
         "side main";
 }
@@ -23,11 +23,11 @@ body {
 .header {
     background-color: white;
     grid-area: head;
-    display: flex;    
+    display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    box-shadow: 0px 4px 26px 10px #00000011;    
+    box-shadow: 0px 4px 26px 10px #00000011;
 }
 
 .sidebar {
@@ -35,8 +35,8 @@ body {
     height: 100vh;
     grid-area: side;
     position: fixed;
-    top: 0;    
-    width: 80px;    
+    top: 0;
+    width: 80px;
     transition: width 0.3s ease-in-out;
     overflow: hidden;
     z-index: 10;
@@ -51,19 +51,19 @@ body {
     display: flex;
     align-items: center;
     height: 100px;
-    margin-bottom: 10px; 
-    white-space: nowrap;  
+    margin-bottom: 10px;
+    white-space: nowrap;
 }
 
 .logo h3 {
     margin: 0;
-    
+
 }
 
-.logo img {    
-    margin: 30px 20px 30px 15px; 
+.logo img {
+    margin: 30px 20px 30px 15px;
     width: 45px;
-    height: auto; 
+    height: auto;
 }
 
 .navbar ul li a {
@@ -76,7 +76,7 @@ body {
 }
 
 .navbar ul li a:hover {
-    background-color: #a88532; 
+    background-color: #a88532;
     border-radius: 10px;
     margin: 0px 20px 0px 20px;
 }
@@ -107,7 +107,7 @@ body {
     height: calc(100vh - 120px);
     padding: 25px;
 }
-  
+
 .combined-container {
     display: flex;
     flex-direction: column;
@@ -115,7 +115,7 @@ body {
     height: 610px;
     border-radius: 8px;
   }
-  
+
   .search-container {
     display: flex;
     align-items: center;
@@ -124,7 +124,7 @@ body {
     padding: 5px;
     background-color: white;
   }
-  
+
   .search-bar {
     flex-grow: 1;
     display: flex;
@@ -146,7 +146,7 @@ body {
   .search-icon {
     color: #888;
   }
-  
+
   .search-container button {
     padding: 10px 20px;
     border: none;
@@ -184,7 +184,7 @@ body {
     background-color: white;
     z-index: 1;
     position: sticky;
-    
+
   }
   th,
   td {
@@ -224,36 +224,36 @@ body {
     padding: 20px;
     border: 1px solid #888;
     width: 300px;
-    height: 27%;
+    height: 180px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     align-items: center;
   }
-  
+
   .modal-content1 {
     background-color: #fefefe;
-    margin: 15% auto;
+    margin: 18% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 300px;
-    height: 27%;
+    height: 160px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     align-items: center;
   }
-  
+
   .modal-content p { /*Confirm password */
     margin-top: 35px;
     font-weight: 600;
   }
-  
+
   .modal-content1 p { /*yes or no */
     margin-top: 35px;
     font-weight: 600;
   }
-  
+
   .modal-buttons {
     display: flex;
     justify-content: space-evenly;
@@ -267,7 +267,7 @@ body {
     border-radius: 5px;
     cursor: pointer;
   }
-  
+
   .confirm-btn1 { /*Confirm yes or no */
     background-color: #ffffff;
     color: black;
@@ -291,7 +291,7 @@ body {
     background-color: #096d16;
     color: #ffffff;
   }
-  
+
   .confirm-btn { /*Confirm password */
     background-color: #ffffff;
     color: #ff2f2f;
@@ -311,20 +311,20 @@ body {
     border: 1px solid #ccc;
     border-radius: 4px;
   }
-  
+
   #search-btn {
     margin-right: 33em;
   }
-  
+
   .case-table::-webkit-scrollbar {
     width: 8px;
   }
-  
+
   .case-table::-webkit-scrollbar-thumb {
     background-color: #888;
     border-radius: 4px;
   }
-  
+
   .case-table::-webkit-scrollbar-track {
     background-color: #f1f1f1;
   }

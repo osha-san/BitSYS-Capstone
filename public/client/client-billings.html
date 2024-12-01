@@ -5,9 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <link rel="icon" href="./img/logo/dmt logo.png " type="icon" />
-        <link rel="stylesheet" href="client-billings.css"> <!--palit-->
-        <script src="client-billings.js" defer></script> <!--palit-->
-        <title>DMT LAW OFFICE</title>     
+        <link rel="stylesheet" href="/resources/css/client/client-billings.css"> <!--palit-->
+        <script src="/resources/js/client/client-billings.js" defer></script> <!--palit-->
+        <title>DMT LAW OFFICE</title>
     </head>
 
     <body>
@@ -18,63 +18,77 @@
 
         <section class="sidebar">
             <div class="logo">
-                <img src="./img/logo/dmt logo.png" alt="DMT Law Logo">                         
+                <img src="./img/logo/dmt logo.png" alt="DMT Law Logo">
                 <h3>DMT Law</h3>
             </div>
-            <nav class="navbar">        
+            <nav class="navbar">
                 <ul>
-                    <li>                        
+                    <li>
                         <a href="client-dashboard.html">
-                            <img src="./img/icons/admin/dashboard.png">Dashboard
-                        </a>                
+                            <img src="./img/icons/admin/dashboard.png" alt="dashboard">Dashboard
+                        </a>
                     </li>
-                    <li>                        
+                    <li>
                         <a href="client-appointment.html">
-                            <img src="./img/icons/admin/appointment.png">Appointments
+                            <img src="./img/icons/admin/appointment.png" alt="appointments">Appointments
                         </a>
                     </li>
                     <li>
                         <a href="client-calendar.html"> <!--palit-->
-                            <img src="./img/icons/admin/calendar.png">Calendar
+                            <img src="./img/icons/admin/calendar.png" alt="calendar">Calendar
                         </a>
                     </li>
-                    <li class="active">                        
+                    <li class="active">
                         <a href="client-billings.html"> <!--palit-->
-                            <img src="./img/icons/client/pay.png">My Bills
+                            <img src="./img/icons/client/pay.png" alt="pay">My Bills
                         </a>
                     </li>
-                    <li>                        
+                    <li>
                         <a href="client-soa.html"> <!--palit-->
-                            <img src="./img/icons/client/document.png">My SOA
+                            <img src="./img/icons/client/document.png" alt="document">My SOA
                         </a>
                     </li>
-                    <li>                        
+                    <li>
                         <a href="client-profile.html"> <!--palit-->
-                            <img src="./img/icons/client/profile.png">Profile
+                            <img src="./img/icons/client/profile.png" alt="profile">Profile
                         </a>
                       </li>
-                    <li class="logout">             <!--palit-->           
+                    <li class="logout">             <!--palit-->
                         <a href="#">
-                            <img src="./img/icons/admin/logout.png">Log Out
+                            <img src="./img/icons/admin/logout.png" alt="logout">Log Out
                         </a>
                     </li>
                 </ul>
             </nav>
         </section>
-        
+
         <main class="main">
             <div class="billingContent"> <!--palit-->
                     <div class="billing">
                       <h2>Billing</h2>
                       <div class="tabs">
                         <div class="tab active" data-tab="all">All</div>
-                        <div class="tab" data-tab="to-pay">to Pay</div>
+
+                    <!--<div class="tab" data-tab="to-pay">to Pay</div>-->
+                        <div class="tab"> <a href="client-billings-topay.html">to Pay</a></div>
                         <div class="tab" data-tab="in-review">In Review</div>
                         <div class="tab" data-tab="rejected">Rejected</div>
                         <div class="tab" data-tab="done">Done</div>
                       </div>
                       <div class="billing-items-container">
-                        <div class="billing-items" id="billing-items"></div>
+                        <!--<div class="billing-items" id="billing-items"></div>-->
+                        <div class="billing-item-header">
+                            <div class="type">${item.type}</div>
+                            <div class="status ${item.status.toLowerCase()}">${item.status}</div>
+                        </div>
+                        <div class="billing-item-details">
+                            <div class="name">${item.attorney}</div>
+                            <div class="date">${item.date}</div>
+                        </div>
+                        <div class="billing-item-footer">
+                            <div class="invoice-no">Invoice No. ${item.id}</div>
+                            <div class="amount">₱${item.amount.toLocaleString()}</div>
+                        </div>
                       </div>
                     </div>
                     <div class="preview">

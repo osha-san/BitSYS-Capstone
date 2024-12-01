@@ -1,6 +1,6 @@
 document.querySelectorAll('.navbar ul li').forEach(item => {
   item.addEventListener('click', function() {
-      document.querySelectorAll('.navbar ul li').forEach(el => el.classList.remove('active'));        
+      document.querySelectorAll('.navbar ul li').forEach(el => el.classList.remove('active'));
       this.classList.add('active');
   });
 });
@@ -62,12 +62,12 @@ const cases = [
       caseNo: "CRIM-21211-MKT",
     },
   ];
-  
+
   function populateTable(filteredCases) {
     const tableBody = document.getElementById("caseTableBody");
     tableBody.innerHTML = "";
     const casesToDisplay = filteredCases || cases;
-  
+
     casesToDisplay.forEach((caseItem) => {
       const row = document.createElement("tr");
       row.innerHTML = `
@@ -78,14 +78,14 @@ const cases = [
           `;
       tableBody.appendChild(row);
     });
-  
+
     document.querySelectorAll(".checkbox").forEach((checkbox) => {
       checkbox.addEventListener("change", function () {
         this.closest("tr").classList.toggle("selected", this.checked);
       });
     });
   }
-  
+
   function searchCases() {
     const searchInput = document
       .querySelector(".search-bar input")
@@ -98,38 +98,43 @@ const cases = [
     );
     populateTable(filteredCases);
   }
-  
+
   document.getElementById("search-btn").addEventListener("click", searchCases);
-  
+
   function showDeleteModal() {
     const checkboxes = document.querySelectorAll(".checkbox:checked");
-    if (checkboxes.length === 0) {
+    if (checkboxes.length == 0) {
       alert("Please select a case to delete.");
     }
+    else{
+        document.getElementById("deleteModal").style.display = "block";
+    }
+    /*
     document.getElementById("deleteModal").style.display = "block";
+    */
   }
-  
+
   function showPasswordModal() {
     document.getElementById("passwordModal").style.display = "block";
   }
-  
+
   function closeModal() {
     document.getElementById("deleteModal").style.display = "none";
     document.getElementById("passwordModal").style.display = "none";
   }
-  
+
   function confirmDelete() {
     closeModal();
     showPasswordModal();
   }
-  
+
   function confirmPassword() {
     alert("Record deleted successfully");
     closeModal();
   }
-  
+
   document
     .querySelector(".delete-btn")
     .addEventListener("click", showDeleteModal);
-  
+
   populateTable();

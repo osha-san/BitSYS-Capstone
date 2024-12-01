@@ -5,9 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <link rel="icon" href="./img/logo/dmt logo.png " type="icon" />
-        <link rel="stylesheet" href="admin-calendar.css"> <!--palit-->
-        <script src="admin-calendar.js" defer></script> <!--palit-->
-        <title>DMT LAW OFFICE</title>     
+        <link rel="stylesheet" href="/resources/css/admin/admin-calendar.css"> <!--palit-->
+        <script src="/resources/js/admin/admin-calendar.js" defer></script> <!--palit-->
+        <title>DMT LAW OFFICE</title>
     </head>
 
     <body>
@@ -18,64 +18,64 @@
 
         <section class="sidebar">
             <div class="logo">
-                <img src="./img/logo/dmt logo.png" alt="DMT Law Logo">                         
+                <img src="./img/logo/dmt logo.png" alt="DMT Law Logo">
                 <h3>DMT Law</h3>
             </div>
-            <nav class="navbar">        
+            <nav class="navbar">
                 <ul>
-                    <li>                        
+                    <li>
                         <a href="admin-dashboard.html">
-                            <img src="./img/icons/admin/dashboard.png">Dashboard
-                        </a>                
+                            <img src="./img/icons/admin/dashboard.png" alt="dashboard">Dashboard
+                        </a>
                     </li>
-                    <li>                        
+                    <li>
                         <a href="admin-appointment.html">
-                            <img src="./img/icons/admin/appointment.png">Appointments
+                            <img src="./img/icons/admin/appointment.png" alt="appointments">Appointments
                         </a>
                     </li>
                     <li class="active">
                         <a href="admin-calendar.html">
-                            <img src="./img/icons/admin/calendar.png">Calendar
+                            <img src="./img/icons/admin/calendar.png" alt="calendar">Calendar
                         </a>
                     </li>
-                    <li>                        
+                    <li>
                         <a href="admin-billings.html"> <!--palit-->
-                            <img src="./img/icons/admin/pay.png">My Bills
+                            <img src="./img/icons/admin/pay.png" alt="my bills">My Bills
                         </a>
                     </li>
-                    <li>                        
+                    <li>
                         <a href="admin-case-library.html"> <!--palit-->
-                            <img src="./img/icons/admin/case library.png">Case Library
+                            <img src="./img/icons/admin/case library.png" alt="case library">Case Library
                         </a>
                     </li>
-                    <li>                        
+                    <li>
                         <a href="admin-clients.html"> <!--palit-->
-                            <img src="./img/icons/admin/my client.png">Clients
+                            <img src="./img/icons/admin/my client.png" alt="clients">Clients
                         </a>
                     </li>
-                    <li>                        
+                    <li>
                         <a href="admin-logbook.html"> <!--palit-->
-                            <img src="./img/icons/admin/logbook.png">Logbook
+                            <img src="./img/icons/admin/logbook.png" alt="logbook">Logbook
                         </a>
                     </li>
-                    <li class="logout">           <!--palit-->             
+                    <li class="logout">           <!--palit-->
                         <a href="#">
-                            <img src="./img/icons/admin/logout.png">Log Out
+                            <img src="./img/icons/admin/logout.png" alt="logout">Log Out
                         </a>
                     </li>
                 </ul>
             </nav>
         </section>
-        
+
         <main class="main">
             <div class="adminCalendar"> <!--palit-->
                 <div class="dashboard_content">
-                    <div class="calendar-header">        
+                    <div class="calendar-header">
                         <b><p id="monthYear"></p></b>
                         <div class="calendar_btn">
                             <button onclick="prevMonth()"><i class="fa-solid fa-chevron-left"></i></button>
                             <button onclick="nextMonth()"><i class="fa-solid fa-chevron-right"></i></button>
-                        </div>                        
+                        </div>
                     </div>
                     <table class="calendar">
                         <thead>
@@ -91,7 +91,7 @@
                         </thead>
                         <tbody id="calendarBody"></tbody>
                     </table>
-                </div>                
+                </div>
                 <div class="dashboard_content" id="toAppointment">
                     <div class="content">
                         <div class="content_header">

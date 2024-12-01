@@ -6,8 +6,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <link rel="icon" href="./img/logo/dmt logo.png " type="icon" />
         <link rel="stylesheet" href="client-dashboard.css"> <!--palit-->
-        <script src="client-dashboard.js" defer></script> <!--palit-->
-        <title>DMT LAW OFFICE</title>     
+        <script src="/resources/js/client/client-dashboard.js" defer></script> <!--palit-->
+        <title>DMT LAW OFFICE</title>
     </head>
 
     <body>
@@ -18,50 +18,50 @@
 
         <section class="sidebar">
             <div class="logo">
-                <img src="./img/logo/dmt logo.png" alt="DMT Law Logo">                         
+                <img src="./img/logo/dmt logo.png" alt="DMT Law Logo">
                 <h3>DMT Law</h3>
             </div>
-            <nav class="navbar">        
+            <nav class="navbar">
                 <ul>
-                    <li class="active">                        
+                    <li class="active">
                         <a href="client-dashboard.html">
-                            <img src="./img/icons/admin/dashboard.png">Dashboard
-                        </a>                
+                            <img src="./img/icons/admin/dashboard.png" alt="dashboard">Dashboard
+                        </a>
                     </li>
-                    <li>                        
+                    <li>
                         <a href="client-appointment.html">
-                            <img src="./img/icons/admin/appointment.png">Appointments
+                            <img src="./img/icons/admin/appointment.png" alt="appointments">Appointments
                         </a>
                     </li>
                     <li>
                         <a href="client-calendar.html"> <!--palit-->
-                            <img src="./img/icons/admin/calendar.png">Calendar
+                            <img src="./img/icons/admin/calendar.png" alt="calendar">Calendar
                         </a>
                     </li>
-                    <li>                        
+                    <li>
                         <a href="client-billings.html"> <!--palit-->
-                            <img src="./img/icons/client/pay.png">My Bills
+                            <img src="./img/icons/client/pay.png" alt="pay">My Bills
                         </a>
                     </li>
-                    <li>                        
+                    <li>
                         <a href="client-soa.html"> <!--palit-->
-                            <img src="./img/icons/client/document.png">My SOA
+                            <img src="./img/icons/client/document.png" alt="document">My SOA
                         </a>
                     </li>
-                    <li>                        
+                    <li>
                         <a href="client-profile.html"> <!--palit-->
-                            <img src="./img/icons/client/profile.png">Profile
+                            <img src="./img/icons/client/profile.png" alt="profile">Profile
                         </a>
                       </li>
-                    <li class="logout">             <!--palit-->           
+                    <li class="logout">             <!--palit-->
                         <a href="#">
-                            <img src="./img/icons/admin/logout.png">Log Out
+                            <img src="./img/icons/admin/logout.png" alt="logout">Log Out
                         </a>
                     </li>
                 </ul>
             </nav>
         </section>
-        
+
         <main class="main">
             <div class="dashboard"> <!--palit-->
                 <div class="dashboard_content">
@@ -73,12 +73,12 @@
                     </div>
                 </div>
                 <div class="dashboard_content">
-                    <div class="calendar-header">        
+                    <div class="calendar-header">
                         <b><p id="monthYear"></p></b>
                         <div class="calendar_btn">
                             <button onclick="prevMonth()"><i class="fa-solid fa-chevron-left"></i></button>
                             <button onclick="nextMonth()"><i class="fa-solid fa-chevron-right"></i></button>
-                        </div>                        
+                        </div>
                     </div>
                     <table class="calendar">
                         <thead>
@@ -94,7 +94,7 @@
                         </thead>
                         <tbody id="calendarBody"></tbody>
                     </table>
-                </div>                
+                </div>
                 <div class="dashboard_content">
                     <div class="content">
                         <div class="content_header">
