@@ -1,0 +1,271 @@
+/* General Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+    font-family: 'Times New Roman', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #fff;
+    padding: 20px 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.logo span {
+    font-style: italic;
+    color: #555;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 80px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #555;
+}
+
+.login-btn {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    background: #6b4b3a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.login-btn:hover {
+    background: #593d2e;
+}
+
+/* Hero Section */
+.hero {
+   /* background: #4CAF50; */   
+    padding: 80px 20px;
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.left-content {
+    margin-left: 10%;
+    font-size: 6rem;
+    color: #333; /* Dark color for text */
+    text-align: left;
+    
+}
+
+.left-content h1 {
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0%;
+}
+
+.left-content h2{
+    font-family: "Inter", sans-serif;
+    font-weight: bolder;
+    display: block;
+    margin-top: 0%;
+}
+
+.right-content {
+    margin-right: 10%;  
+    font-size: 1.5rem;
+    color: #333; /* Lighter color for the supporting text */
+    text-align: left;
+}
+.right-content h1{
+    margin-right: 10%;  
+    font-size: 1.5rem;
+    color: #333; /* Lighter color for the supporting text */
+
+}
+
+.right-content h2 {
+    font-size: 2rem;
+    font-weight: 600;
+     /* Emphasize the 'entire team' text */
+    color: #AF6300;
+    
+}
+
+.cta-btn {
+    padding: 15px 30px;
+    background-color: #593d2e;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.cta-btn:hover {
+    background-color: #6b4b3a;
+}
+
+/* Profile Section */
+.profile {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px 0;
+}
+
+.profile-card {
+    background: rgb(214, 214, 214);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    padding: 0px;
+    box-shadow: 0 500px 50px rgba(0, 0, 0, 0.1);
+}
+
+.profile-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    /*border-radius: 50%;*/
+    margin-bottom: 15px;
+}
+
+.profile-card h2 {
+    font-size: 1.5rem;
+    color: #000000;
+}
+
+.profile-card p {
+    font-size: 1rem;
+    color: #000000;
+}
+
+/* Practice Areas Section */
+.practice-areas {
+    background: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.practice-areas h2 {
+  
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.area-card {
+    background: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 250px;
+    margin: 15px;
+    padding: 20px;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.area-card h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.area-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+    text-align: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+    color: #aaa;
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+}
+
+h2{
+    font-family: "Inter", sans-serif;
+    font-size: 90% !important;
+    font-weight: bold;
+}
+h3{
+    font-family: "Inter", sans-serif;
+    font-size: 90% !important;
+    font-weight: bold;  
+}
